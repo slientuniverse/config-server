@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/slientuniverse/config-repo.git
+          username: xl521365@live.com
+          password: xl521365@hyt@
+          basedir: C:\project\config\basedir
+  rabbitmq:
+    host: ${eureka.instance.hostname}
+    port: 5672
+    username: admin
+    password: admin123
+
+server:
+  port: 9001
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:9000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
