@@ -8,7 +8,6 @@ spring:
           uri: https://github.com/slientuniverse/config-repo.git
           username: xl521365@live.com
           password: xl521365@hyt@
-          basedir: C:\project\config\basedir
   rabbitmq:
     host: ${eureka.instance.hostname}
     port: 5672
@@ -16,7 +15,7 @@ spring:
     password: admin123
 
 server:
-  port: 9001
+  port: 9006
 
 eureka:
   instance:
@@ -24,9 +23,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:9000/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
